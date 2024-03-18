@@ -1,7 +1,7 @@
 /**
  * @file NGINX Configuration grammar for tree-sitter
  * @author Jonathan Coole
- * @license MIT
+ * @license GPLv3
  */
 
 module.exports = grammar({
