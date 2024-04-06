@@ -586,12 +586,45 @@
         }
       ]
     },
-    "lua_block_directive": {
-      "type": "SEQ",
+    "_lua_block_directives": {
+      "type": "CHOICE",
       "members": [
         {
           "type": "STRING",
           "value": "access_by_lua_block"
+        },
+        {
+          "type": "STRING",
+          "value": "header_filter_by_lua_block"
+        },
+        {
+          "type": "STRING",
+          "value": "body_filter_by_lua_block"
+        },
+        {
+          "type": "STRING",
+          "value": "log_by_lua_block"
+        },
+        {
+          "type": "STRING",
+          "value": "balancer_by_lua_block"
+        },
+        {
+          "type": "STRING",
+          "value": "content_by_lua_block"
+        },
+        {
+          "type": "STRING",
+          "value": "rewrite_by_lua_block"
+        }
+      ]
+    },
+    "lua_block_directive": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_lua_block_directives"
         },
         {
           "type": "SYMBOL",

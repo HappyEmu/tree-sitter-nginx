@@ -355,8 +355,20 @@
     "named": false
   },
   {
+    "type": "balancer_by_lua_block",
+    "named": false
+  },
+  {
+    "type": "body_filter_by_lua_block",
+    "named": false
+  },
+  {
     "type": "comment",
     "named": true
+  },
+  {
+    "type": "content_by_lua_block",
+    "named": false
   },
   {
     "type": "directive",
@@ -375,8 +387,16 @@
     "named": true
   },
   {
+    "type": "header_filter_by_lua_block",
+    "named": false
+  },
+  {
     "type": "ipv4",
     "named": true
+  },
+  {
+    "type": "log_by_lua_block",
+    "named": false
   },
   {
     "type": "metric",
@@ -389,6 +409,10 @@
   {
     "type": "regex_pattern",
     "named": true
+  },
+  {
+    "type": "rewrite_by_lua_block",
+    "named": false
   },
   {
     "type": "scheme",

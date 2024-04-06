@@ -215,8 +215,19 @@ module.exports = grammar({
     ////////////////////////////////////////
     // Lua Block Parsing Begins
     ////////////////////////////////////////
-    lua_block_directive: $ => seq(
+    
+    _lua_block_directives: $ => choice(
       'access_by_lua_block',
+      'header_filter_by_lua_block',
+      'body_filter_by_lua_block',
+      'log_by_lua_block',
+      'balancer_by_lua_block',
+      'content_by_lua_block',
+      'rewrite_by_lua_block'
+    ),
+    
+    lua_block_directive: $ => seq(
+      $._lua_block_directives,
       $.lua_block
     ),
     
@@ -234,6 +245,7 @@ module.exports = grammar({
         repeat($._lua_code),
         '}'
       )),
+      // TODO: Strings cause redundant lua_code
       optional(seq(
         '"',
         /[^\"]+/,
