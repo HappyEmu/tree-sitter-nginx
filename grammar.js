@@ -89,7 +89,7 @@ module.exports = grammar({
     // Simple Parameter Types Begin
     ////////////////////////////////////////
     
-    generic: $ => /[\w\/\-\.]*[A-Za-z][\w\/\-=,?]+/,
+    generic: $ => /[\w\/\-\.]*[A-Za-z][\w\/\-=,?\.]+/,
     
     // Metrics are denoted numeric values: 1k 4m
     metric: $ => /\d+[A-Za-z]+/,
